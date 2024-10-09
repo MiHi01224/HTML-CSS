@@ -8,6 +8,73 @@ body{
     letter-spacing: 0;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* header */
+.header{
+    padding:30px 0;
+    background-color:#123D88;
+}
+
+.header__inner{
+    max-width: 1200px;
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.header__logo{
+    line-height: 1;
+}
+
+/* footer */
+.footer{
+    padding: 32px 0;
+    background-color: #123D88;
+    text-align: right;
+}
+
+.footer__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__copy{
+    color: #fff;
+    font-size: 15px;
+}
+
+/* features */
+.features{
+    padding:80px 0;
+}
+
+.features__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features__info{
+    width:46%;
+}
+
+.features__list {
+    width: 46%;
+}
+
+
 .btn{
     display: block;
     width:200px;
