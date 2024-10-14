@@ -1,55 +1,23 @@
 @charset "utf-8";
 
-body{
-    color:#6c6c6f;
-    font-family:  Helvetica, sans-serif, Arial;
+/* base
+------------------------*/
+body {
+    color: #6C6C6F;
     font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.75;
     letter-spacing: 0;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
 }
 
-/* header */
-.header{
-    padding:30px 0;
-    background-color:#123D88;
-}
-
-.header__inner{
-    max-width: 1200px;
-    width:90%;
-    margin-left:auto;
-    margin-right: auto;
-}
-
-.header__logo{
-    line-height: 1;
-}
-
-/* footer */
-.footer{
-    padding: 32px 0;
-    background-color: #123D88;
-    text-align: right;
-}
-
-.footer__inner {
-    max-width: 1200px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer__copy{
-    color: #fff;
-    font-size: 15px;
-}
-
+/* module
+------------------------*/
 /* unit */
 .unit__catch {
     margin-bottom: 20px;
@@ -72,12 +40,11 @@ img{
     margin-bottom: 40px;
 }
 
-/* .unit--center{
+.unit--center {
     text-align: center;
-} */
+}
 
 /* card */
-
 .card__icon {
     margin-bottom: 40px;
 }
@@ -95,8 +62,8 @@ img{
     width: 200px;
     margin-top: 60px;
     padding: 20px 0;
-    color: #fff;
     background-color: #256BE6;
+    color: #fff;
     font-weight: bold;
     line-height: 1;
     letter-spacing: 0.025em;
@@ -104,27 +71,60 @@ img{
     border-radius: 27.5px;
 }
 
-.btn--second{
-    margin-top: 40px;
+.btn--second {
     background-color: #2DBE61;
-    width: 100%;
 }
 
-.btn--third {
+.btn--warning {
     background-color: #F87624;
 }
 
-.btn--outline{
+.btn--outline {
     background-color: transparent;
-    border:1px solid #fff;
+    border: 1px solid #fff;
 }
 
-/*　index
-----------------------------　*/
+/* header */
+.header {
+    padding: 30px 0;
+    background-color: #123D88;
+}
 
+.header__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__logo {
+    line-height: 1;
+}
+
+/* footer */
+.footer {
+    padding: 32px;
+    background-color: #123D88;
+    text-align: right;
+}
+
+.footer__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__copy {
+    color: #fff;
+    font-size: 15px;
+}
+
+/* index
+------------------------*/
 /* features */
-.features{
-    padding:80px 0;
+.features {
+    padding: 80px 0;
 }
 
 .features__inner {
@@ -138,26 +138,25 @@ img{
     align-items: center;
 }
 
-.features__info{
-    width:46%;
+.features__info {
+    width: 46%;
 }
 
 .features__list {
-    margin-bottom:-70px;
     width: 46%;
+    margin-bottom: -70px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.features__item{
-    margin-bottom:70px;
+.features__item {
     width: 46%;
+    margin-bottom: 70px;
 }
 
 /* payment */
-
-.payment{
+.payment {
     padding: 80px 0;
     background-color: #F7FAFF;
 }
@@ -173,21 +172,18 @@ img{
     align-items: center;
 }
 
-.payment__pic{
-    width: 46%;
-}
-
 .payment__info {
     width: 46%;
 }
 
-/*service
-----------------------------　*/
+.payment__pic {
+    width: 46%;
+}
 
-/* wedo */
-
-.wedo{
-    padding:80px 0;
+/* service
+------------------------*/
+.wedo {
+    padding: 80px 0;
 }
 
 .wedo__inner {
@@ -197,33 +193,40 @@ img{
     margin-right: auto;
 }
 
-.wedo__info{
+.wedo__info {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.wedo__list{
+.wedo__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 60px;
-    background-color:#F7FAFF;
+    background-color: #F7FAFF;
 }
 
-.wedo__item{
-    width:30%;
-    padding:40px;
+.wedo__item {
+    width: 30%;
+    padding: 40px;
     background-color: #fff;
     text-align: center;
 }
 
+.wedo__item .btn {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* offer */
 .offer {
     padding: 80px 0;
-    background-color:#505050;
+    background-color: #505050;
 }
 
 .offer__inner {
@@ -233,23 +236,122 @@ img{
     margin-right: auto;
 }
 
-.offer__info{
+.offer__info {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: #fff;
     text-align: center;
-}
-
-.offer__info .unit__title{
     color: #fff;
 }
 
-.offer__info .btn{
+.offer__info .unit__title {
+    color: #fff;
+}
+
+.offer__info .btn {
     margin-left: auto;
     margin-right: auto;
 }
 
 
-/*help　
-----------------------------　*/
+/* help
+------------------------*/
+/* transfer */
+.transfer {
+    padding: 80px;
+}
+
+.transfer__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transfer__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.transfer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.transfer__item {
+    width: 30%;
+    text-align: center;
+}
+
+/* question */
+.question {
+    padding: 80px 0;
+    background-color: #123D88;
+}
+
+.question__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.question__info .unit__title {
+    color: #fff;
+}
+
+.question__info .btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* asked */
+.asked {
+    padding: 80px 0;
+}
+
+.asked__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.asked__info {
+    width: 46%;
+}
+
+.asked__list {
+    width: 46%;
+    margin-bottom: -45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.asked__item {
+    width: 46%;
+    padding: 40px;
+    border:1px solid #6c6c6f;
+    text-align: center;
+}
+
+.card__title:last-child{
+    margin-bottom: 0;
+}
