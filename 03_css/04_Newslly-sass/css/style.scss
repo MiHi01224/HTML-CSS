@@ -5,6 +5,7 @@ $color-main: #202124;
 $color-accent: #FA6980;
 $color-bg: #F6F6F6;
 $color-time: #BBBBBB;
+$color-border:#DDD;
 
 @mixin inner($mw: 800px, $w: 90%) {
     max-width: $mw;
@@ -80,6 +81,10 @@ body {
         font-size: 18px;
         font-weight: bold;
         line-height: (23/18);
+
+        &--border{
+            border-bottom:$color-border 1px solid;
+        }
     }
 }
 
@@ -118,6 +123,9 @@ body {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+}
+.btn--black{
+    background-color: $color-main;
 }
 
 /* time */
@@ -173,5 +181,38 @@ body {
 
     &__item {
         width: (380/800)*100%;
+    }
+}
+
+/* about.html
+---------------------------*/
+/* news */
+.news{
+    padding-bottom: 60px;
+
+    &__inner{
+        @include inner();
+    }
+}
+
+/* discovery */
+.discovery {
+    padding: 60px 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main();
+    }
+
+    &__list {
+        @include flex(flex-start);
+    }
+
+    &__item {
+        width: (240/800)*100%;
     }
 }
