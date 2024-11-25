@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+$color-main: #DEF6FF;
+$color-bg: #E8EDF1;
+$color-accent: #FFF5DE;
+$color-text: #1B2D55;
+
+$breakpoints: (
+    "desktop": "screen and (min-width: 910px)",
+    ) !default;
+
+@mixin m-query($breakpoint: "desktop") {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin m-inner($w: (640/740)*100%, $mw: 1000px) {
+    width: $w;
+    max-width: $mw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin m-flex($a: center, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin m-title-main() {
+    font-size: f-rem(36);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    line-height: (44/36);
+}
+
+@function f-rem($value) {
+    @return ($value/16)+rem;
+}
+
+/* base
+----------------------------------*/
+
+body{
+    color: $color-text;
+    font-size:f-rem(14);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height:(24/14);
+    letter-spacing: 0.05;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align:bottom;
+}
+
+/* header */
+.header{
+    padding:(60em/14) 0;
+
+    &__inner{
+        @include m-inner();
+        @include m-flex();
+    }
+
+    &__menu {
+        @include m-query(desktop) {
+            display: none;
+        }
+    }
+}
+
+.nav {
+    display: none;
+
+    @include m-query(desktop) {
+        display: block;
+    }
+
+    &__list{
+        @include m-flex();
+    }
+
+    &__item{
+        margin:0 15px;
+    }
+}
+
+/* footer */
+.footer{
+    padding:(120em/14) 0 (200em/14);
+    background-color: $color-bg;
+
+    &__inner{
+        @include m-inner();
+
+        @include m-query(){
+            @include m-flex(flex-end);
+        }
+    }
+
+    &__copy{
+        text-align: center;
+        font-weight: bold;
+    }
+
+}
+
+.contact{
+    display: block;
+    text-align: center;
+
+    &__title{
+        margin-bottom: 40px;
+        @include m-title-main();
+        text-align: center;
+    }
+
+    &__info{
+        display: inline-block;
+        text-align: left;
+
+    }
+
+    &__item {
+        @include m-flex(center, flex-start);
+    }
+
+    &__feature {
+        width: 100px;
+    }
+}
+
+/* card */
+.card{
+    text-align: center;
+
+    &__title{
+        margin-bottom: (40em/48);
+        @include m-title-main();
+        text-align: left;
+    }
+
+    &__text{
+        margin-bottom: (60em/14);
+        text-align: left;
+    }
+}
+
+/* btn */
+.btn{
+    display: block;
+    width:200px;
+    padding:20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    background-color: $color-text;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+/* index
+----------------------------------*/
+/* about */
+.about{
+    padding:(150em/14) 0 (560em/14);
+    background:url(../images/img_about.png)no-repeat center bottom 60px $color-main;
+
+    @include m-query(){
+        padding: (150em/14) 0 (170em/14);
+            background: url(../images/img_about.png)no-repeat right bottom 60px $color-main;
+    }
+
+    &__inner{
+        @include m-inner();
+    }
+
+    &__title{
+        margin-bottom:(80em/48);
+        @include m-title-main();
+            font-size: f-rem(48);
+            line-height: (58/48);
+    }
+
+    &__list{
+        margin-top: (40em/14);
+        @include m-flex(center,flex-start);
+    }
+
+    &__item{
+        margin-right:(20em/14);
+    }
+}
+/* advantages */
+.advantages{
+    margin:(120em/14) 0;
+
+    &__inner{
+        @include m-inner();
+    }
+
+    &__title{
+        margin-bottom: (80em/48);
+        @include m-title-main();
+        font-size: f-rem(48);
+        text-align: center;
+    }
+
+    &__list{
+        @include m-query(){
+            @include m-flex(flex-start);
+            align-items: stretch;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        @include m-query() {
+            width:(540/1140)*100%;
+        }
+    }
+}
