@@ -6,7 +6,7 @@ $color-accent: #FFF5DE;
 $color-text: #1B2D55;
 
 $breakpoints: (
-    "desktop": "screen and (min-width: 910px)",
+    "desktop": "screen and (min-width: 850px)",
     ) !default;
 
 @mixin m-query($breakpoint: "desktop") {
@@ -73,6 +73,14 @@ img{
     }
 }
 
+.navall{
+    @include m-flex();
+
+    @include m-query(desktop){
+        flex:auto;
+    }
+}
+
 .nav {
     display: none;
 
@@ -94,16 +102,19 @@ img{
     padding:(120em/14) 0 (200em/14);
     background-color: $color-bg;
 
+
     &__inner{
         @include m-inner();
+        text-align: center;
 
-        @include m-query(){
+        @include m-query(desktop){
             @include m-flex(flex-end);
         }
     }
 
     &__copy{
-        text-align: center;
+        display: block;
+        margin-top: 60px;
         font-weight: bold;
     }
 
@@ -150,6 +161,40 @@ img{
     }
 }
 
+/* unit */
+
+.unit{
+    &__content{
+        @include m-query(){
+            width:(500/1140)*100%;
+        }
+    }
+
+    &__pic {
+        @include m-query() {
+            width: (580/1140)*100%;
+        }
+    }
+
+    &__list{
+        @include m-flex( center,flex-start);
+    }
+
+    &__item{
+        display: block;
+        margin-right: (20em/14);
+        padding:(15em/14) (30em/14);
+        border-radius: 20px;
+        background-color: #fff;
+        line-height: 1;
+        font-size: f-rem(12);
+        font-weight: bold;
+    }
+
+
+}
+
+
 /* btn */
 .btn{
     display: block;
@@ -172,7 +217,7 @@ img{
     padding:(150em/14) 0 (560em/14);
     background:url(../images/img_about.png)no-repeat center bottom 60px $color-main;
 
-    @include m-query(){
+    @include m-query(desktop){
         padding: (150em/14) 0 (170em/14);
             background: url(../images/img_about.png)no-repeat right bottom 60px $color-main;
     }
@@ -197,9 +242,10 @@ img{
         margin-right:(20em/14);
     }
 }
+
 /* advantages */
 .advantages{
-    margin:(120em/14) 0;
+    padding:(120em/14) 0;
 
     &__inner{
         @include m-inner();
@@ -213,7 +259,8 @@ img{
     }
 
     &__list{
-        @include m-query(){
+        margin-bottom: -160px;
+        @include m-query(desktop){
             @include m-flex(flex-start);
             align-items: stretch;
         }
@@ -222,9 +269,38 @@ img{
     &__item {
         display: flex;
         flex-direction: column;
+        margin-bottom: 160px;
 
-        @include m-query() {
+        @include m-query(desktop) {
             width:(540/1140)*100%;
         }
     }
+}
+
+/* features */
+.features{
+    padding:(120em/14) 0;
+    background-color: $color-accent;
+
+    &__inner{
+        @include m-inner();
+    }
+
+    &__title{
+        margin-bottom: 80px;
+        @include m-title-main();
+        text-align: center;
+    }
+
+    &__item{
+        @include m-query(){
+            @include m-flex();
+
+            &:nth-child(even){
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+
 }
