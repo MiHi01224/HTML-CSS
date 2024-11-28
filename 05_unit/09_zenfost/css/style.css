@@ -150,6 +150,12 @@ img {
   justify-content: flex-start;
   align-items: center;
 }
+.unit__title {
+  font-size: 2.25rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  line-height: 1.2222222222;
+}
 .unit__item {
   display: block;
   margin-right: 1.4285714286em;
@@ -275,8 +281,12 @@ img {
   line-height: 1.2222222222;
   text-align: center;
 }
+.features__item {
+  margin-bottom: 8.5714285714em;
+}
 @media screen and (min-width: 850px) {
   .features__item {
+    margin-bottom: 5.7142857143em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

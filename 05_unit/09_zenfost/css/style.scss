@@ -180,6 +180,10 @@ img{
         @include m-flex( center,flex-start);
     }
 
+    &__title{
+        @include m-title-main();
+    }
+
     &__item{
         display: block;
         margin-right: (20em/14);
@@ -293,7 +297,10 @@ img{
     }
 
     &__item{
+        margin-bottom: (120em/14);
+
         @include m-query(){
+            margin-bottom: (80em/14);
             @include m-flex();
 
             &:nth-child(even){
