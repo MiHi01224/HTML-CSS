@@ -155,8 +155,14 @@ img {
     color: #fff;
     font-weight: bold;
     line-height: 1;
-    text-align: center
+    text-align: center;
+    transition:.3s;
+
+    &:hover{
+        background-color: #fff;
+    }
 }
+
 
 
 /* nav */

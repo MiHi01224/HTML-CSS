@@ -112,6 +112,10 @@ img {
   font-weight: bold;
   line-height: 1;
   text-align: center;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #fff;
 }
 
 /* nav */
